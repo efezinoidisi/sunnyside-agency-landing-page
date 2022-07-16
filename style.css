@@ -52,28 +52,18 @@ header {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 6rem;
+    top: 4rem;
     left: 0;
     right: 0;
-    width: 88%;
+    width: 89%;
     background-color: #fff;
-    height: 320px;
+    height: 350px;
     margin: 0 auto;
-    clip-path: polygon(22% 11%,
-            0 11%,
-            0 57%,
-            0% 80%,
-            0 100%,
-            53% 100%,
-            100% 100%,
-            100% 80%,
-            100% 47%,
-            100% 0,
-            79% 10%,
-            47% 10%);
+    clip-path: polygon(0 11%, 0 57%, 0% 80%, 0 100%, 53% 100%, 100% 100%, 100% 80%, 100% 47%, 100% 0, 94% 11%);
     border-radius: 5px;
-
+    transition: .3s;
 }
+
 
 .displayMenu li {
     list-style-type: none;
@@ -114,8 +104,44 @@ h1 {
     cursor: pointer;
 }
 
+.header button {
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 0/8rem;
+    text-transform: uppercase;
+    color: #25564b;
+    font-weight: 700;
+}
+
+.header button:hover {
+    background-color: hsla(180, 55%, 79%, 0.7);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+    transition: .5s;
+}
+
 #main-nav {
     display: none;
+}
+
+#main-nav li {
+    display: inline-block;
+}
+
+#main-nav li:hover {
+    background-color: hsla(180, 55%, 79%, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+#main-nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: hsl(0, 0%, 100%);
 }
 
 main {
@@ -223,6 +249,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 .client-images {
@@ -241,21 +268,25 @@ section {
 .profile {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .profiles {
     padding: 10px 20px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .profiles p {
     margin-bottom: 30px;
     line-height: 1.4;
     font-size: 1.1rem;
-    color: hsl(213, 9%, 39%);
+    color: hsl(232, 10%, 55%);
     font-weight: 500;
 }
 
 .author {
+
     font-weight: 900;
     color: hsl(213, 9%, 39%);
 }
@@ -330,7 +361,7 @@ section {
         padding: 2rem;
     }
 
-    #hidden {
+    .mobileMenu {
         display: none;
     }
 
@@ -348,38 +379,6 @@ section {
 
     #arrow {
         margin-top: 1rem;
-    }
-
-    #main-nav li {
-        display: inline-block;
-    }
-
-    #main-nav a {
-        text-decoration: none;
-        padding: 10px;
-        color: hsl(210, 4%, 67%);
-    }
-
-    #main-nav li:hover {
-        background-color: hsl(210, 4%, 67%);
-        color: #fff;
-    }
-
-    .header button {
-        border: none;
-        border-radius: 20px;
-        padding: 10px;
-        font-size: 0/8rem;
-        text-transform: uppercase;
-        color: #25564b;
-        font-weight: 700;
-        background-color: #fff;
-    }
-
-    .header button:hover {
-        background-color: hsl(210, 4%, 67%);
-        color: #fff;
-        cursor: pointer;
     }
 
     h1 {
@@ -402,8 +401,8 @@ section {
     }
 
     .first-column {
-        text-align: center;
-        align-items: center;
+        text-align: left;
+        align-items: flex-start;
         padding: 0 1rem;
         line-height: 1.5;
     }
@@ -443,6 +442,10 @@ section {
         flex-direction: row;
     }
 
+    .profiles {
+        width: 50%;
+    }
+
     .pictures {
         flex-wrap: nowrap;
     }
@@ -479,41 +482,6 @@ section {
 
     #arrow {
         margin-top: 1.7rem;
-    }
-
-    #main-nav li {
-        display: inline-block;
-    }
-
-    #main-nav li:hover {
-        background-color: rgba(96, 164, 219, 0.3);
-        color: #fff;
-        padding: 10px;
-        border-radius: 10px;
-
-    }
-
-    #main-nav a {
-        text-decoration: none;
-        padding: 10px;
-        color: hsl(0, 0%, 100%);
-    }
-
-    .header button {
-        border: none;
-        border-radius: 20px;
-        padding: 10px;
-        font-size: 0/8rem;
-        text-transform: uppercase;
-        color: #25564b;
-        font-weight: 700;
-    }
-
-    .header button:hover {
-        background-color: rgba(96, 164, 219, 0.3);
-        color: #fff;
-        cursor: pointer;
-        font-weight: 900;
     }
 
     h1 {
@@ -574,6 +542,10 @@ section {
         flex-direction: row;
     }
 
+    .profiles {
+        width: 50%;
+    }
+
     .pictures {
         flex-wrap: nowrap;
     }
@@ -581,5 +553,4 @@ section {
     .imgs {
         width: 25%;
     }
-
 }
